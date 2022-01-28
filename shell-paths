@@ -8,9 +8,11 @@ export PATH="/usr/local/sbin:$PATH"
 export PATH="/usr/local/opt/llvm/bin:$PATH"
 
 # Java/Android
-export JAVA_HOME=$(/usr/libexec/java_home)
-export ANDROID_HOME="$HOME/Library/Android/sdk"
-export PATH="$ANDROID_HOME/platform-tools:$PATH"
+if [ -f "/usr/libexec/java_home" ]; then
+    export JAVA_HOME=$(/usr/libexec/java_home)
+    export ANDROID_HOME="$HOME/Library/Android/sdk"
+    export PATH="$ANDROID_HOME/platform-tools:$PATH"
+fi
 
 # NVM
 export NVM_DIR="$HOME/.nvm"
