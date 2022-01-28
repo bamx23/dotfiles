@@ -3,6 +3,7 @@ alias openports="netstat -an | egrep 'Proto|LISTEN' | grep tcp4 | awk '{print \$
 alias openportss="netstat -an | egrep 'Proto|LISTEN' | grep tcp | sort"
 
 [ -x "$(command -v bat)" ] && alias cat=bat
+[ -x "$(command -v batcat)" ] && alias cat=batcat
 
 [ -x "$(command -v exa)" ] && alias ls=exa
 [ -x "$(command -v exa)" ] && alias la="exa -la --grid"
