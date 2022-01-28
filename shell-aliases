@@ -2,6 +2,7 @@
 alias openports="netstat -an | egrep 'Proto|LISTEN' | grep tcp4 | awk '{print \$4}' | sed 's/\(.*\)\.\([0-9]*\)/\2   \1/' | sort -g"
 alias openportss="netstat -an | egrep 'Proto|LISTEN' | grep tcp | sort"
 
-alias ls=exa
-alias cat=bat
-alias la="exa -la --grid"
+[ -x "$(command -v bat)" ] && alias cat=bat
+
+[ -x "$(command -v exa)" ] && alias ls=exa
+[ -x "$(command -v exa)" ] && alias la="exa -la --grid"

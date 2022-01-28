@@ -3,6 +3,7 @@
 [ -f "$HOME/.shell-paths-local" ] && source "$HOME/.shell-paths-local"
 
 # Bins
+export PATH="$HOME/bin:/usr/local/bin:$PATH"
 export PATH="/usr/local/sbin:$PATH"
 export PATH="/usr/local/opt/llvm/bin:$PATH"
 
