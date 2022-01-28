@@ -1,3 +1,4 @@
+alias update-dotfiles="( cd ~/.dotfiles && git pull && rcup )"
 
 alias openports="netstat -an | egrep 'Proto|LISTEN' | grep tcp4 | awk '{print \$4}' | sed 's/\(.*\)\.\([0-9]*\)/\2   \1/' | sort -g"
 alias openportss="netstat -an | egrep 'Proto|LISTEN' | grep tcp | sort"
