@@ -24,3 +24,4 @@ Setting the `RCRC` environment variable tells `rcup` to use standard configurati
 
 * Exclude the `README.md` and `LICENSE` files, which are part of the `dotfiles` repository but do not need to be symlinked in.
 * Please configure the `rcrc` file if you'd like to make personal overrides in a different directory.
+* Local modifications to `$PATH` can be done in `.shell-paths-local` (create one if needed).

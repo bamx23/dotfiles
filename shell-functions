@@ -1,0 +1,5 @@
+function decode() {
+    KEY=$(xxd -p <<< $1)
+    IV=$(dd bs=1 count=16 2>/dev/null | xxd -p)
+    dd bs=1 2>/dev/null | openssl enc -d -aes-128-cbc -K "$KEY" -iv "$IV" | gzip -d
+}
