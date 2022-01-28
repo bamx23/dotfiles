@@ -32,8 +32,19 @@ This command will create symlinks for config files in your home directory.
 Setting the `RCRC` environment variable tells `rcup` to use standard configuration options:
 
 * Exclude the `README.md` and `LICENSE` files, which are part of the `dotfiles` repository but do not need to be symlinked in.
+* Exclude the `extra` directory as it contains files that should not be symlinked.
 * Please configure the `rcrc` file if you'd like to make personal overrides in a different directory.
 * Local modifications to `$PATH` can be done in `.shell-paths-local` (create one if needed).
+
+## Extra
+
+### iTerm 2
+
+To make iTerm 2 use the config from this repo, run this:
+```bash
+defaults write com.googlecode.iterm2.plist PrefsCustomFolder -string "${HOME}/.dotfiles/extra/iterm2"
+defaults write com.googlecode.iterm2.plist LoadPrefsFromCustomFolder -bool true
+```
 
 ## Troubleshooting
 
