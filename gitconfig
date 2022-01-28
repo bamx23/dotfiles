@@ -1,12 +1,19 @@
 [user]
 	name = Nikolay Volosatov
 	email = 443972+bamx23@users.noreply.github.com
+	signingkey = C9F018EBE114E527
 
 [core]
 	excludesfile = ~/.gitignore_global
+
+[commit]
+	gpgsign = true
 
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
 	required = true
+
+[init]
+	defaultBranch = main
