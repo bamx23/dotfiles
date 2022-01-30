@@ -12,11 +12,7 @@ source ~/.shell-aliases
 source ~/.shell-paths
 source ~/.shell-functions
 
-if [[ -n $SSH_CONNECTION ]]; then
-  export EDITOR='vim'
-else
-  export EDITOR='mvim'
-fi
+export EDITOR='nano'
 
 # Other
 
