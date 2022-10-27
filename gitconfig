@@ -1,7 +1,7 @@
 [user]
 	name = Nikolay Volosatov
-	email = mikalai.valasatau@mapbox.com
-	signingkey = C9F018EBE114E527
+	email = bamx23@meta.com
+	signingkey = FF06334B5C393AC9!
 
 [core]
 	excludesfile = ~/.gitignore_global
