@@ -6,6 +6,8 @@ export LANG=en_US.UTF-8
 source $HOME/antigen.zsh
 antigen init $HOME/.antigenrc
 
+functions[prompt_hg]=""
+
 # Own
 
 source ~/.shell-aliases
