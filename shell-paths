@@ -16,8 +16,16 @@ fi
 # Java/Android
 if [ -f "/usr/libexec/java_home" ]; then
     export JAVA_HOME=$(/usr/libexec/java_home)
+fi
+if [ -d "/opt/android_sdk" ]; then
+    export ANDROID_SDK="/opt/android_sdk"
+    export ANDROID_NDK_REPOSITORY="/opt/android_ndk"
+    export ANDROID_HOME="${ANDROID_SDK}"
+else
     export ANDROID_HOME="$HOME/Library/Android/sdk"
-    export PATH="$ANDROID_HOME/platform-tools:$PATH"
+fi
+if [ -d "$ANDROID_HOME" ]; then
+    export PATH="${PATH}:${ANDROID_HOME}/emulator:${ANDROID_HOME}/tools:${ANDROID_HOME}/tools/bin:${ANDROID_HOME}/platform-tools"
 fi
 
 # NVM
