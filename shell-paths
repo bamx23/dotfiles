@@ -11,10 +11,12 @@ export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
 
 # Brew
 if [ -s "$HOME/.homebrew/bin/brew" ]; then
-    eval "$($HOME/.homebrew/bin/brew shellenv)"
+    export HOMEBREW_PREFIX="$HOME/.homebrew"
+elif [ -s "/opt/homebrew/bin/brew" ]; then
+    export HOMEBREW_PREFIX="/opt/homebrew"
 fi
-if [ -s "/opt/homebrew/bin/brew" ]; then
-    eval "$(/opt/homebrew/bin/brew shellenv)"
+if [ -s "$HOMEBREW_PREFIX/bin/brew" ]; then
+    eval "$($HOMEBREW_PREFIX/bin/brew shellenv)"
 fi
 
 # Java/Android
