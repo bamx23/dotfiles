@@ -10,8 +10,8 @@ functions[prompt_hg]=""
 
 # Own
 
-source ~/.shell-aliases
 source ~/.shell-paths
+source ~/.shell-aliases
 source ~/.shell-functions
 
 export EDITOR='nano'
