@@ -7,3 +7,12 @@ function decode() {
 function vencode() {
     ffmpeg -i "$1" -vcodec libx264 -crf 24 "$1".mp4
 }
+
+# Convert video to gif file.
+# Usage: gencode video_file [scale, 320] [fps, 10]
+# https://superuser.com/a/1154859
+function gencode() {
+    ffmpeg -y -i "${1}" -vf fps=${3:-10},scale=${2:-320}:-1:flags=lanczos,palettegen "${1}.png"
+    ffmpeg -i "${1}" -i "${1}.png" -filter_complex "fps=${3:-10},scale=${2:-320}:-1:flags=lanczos[x];[x][1:v]paletteuse" "${1}".gif
+    rm "${1}.png"
+}
