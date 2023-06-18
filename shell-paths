@@ -10,7 +10,9 @@ export PATH="/usr/local/opt/llvm/bin:$PATH"
 export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
 
 # Brew
-if [ -s "$HOME/.homebrew/bin/brew" ]; then
+if [ "$(arch)" = "i386" ] && [ -s "$HOME/.homebrew-x86/bin/brew" ]; then
+    export HOMEBREW_PREFIX="$HOME/.homebrew-x86"
+elif [ -s "$HOME/.homebrew/bin/brew" ]; then
     export HOMEBREW_PREFIX="$HOME/.homebrew"
 elif [ -s "/opt/homebrew/bin/brew" ]; then
     export HOMEBREW_PREFIX="/opt/homebrew"
