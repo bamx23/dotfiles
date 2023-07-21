@@ -21,6 +21,13 @@ fi
 export PATH="$HOMEBREW_PREFIX/opt/openjdk/bin:$PATH"
 export PATH="$HOMEBREW_PREFIX/opt/llvm/bin:$PATH"
 
+# VSCode
+if [ -d "/Applications/Visual Studio Code - Insiders.app" ]; then
+    export PATH="$PATH:/Applications/Visual Studio Code - Insiders.app/Contents/Resources/app/bin"
+elif [ -d "/Applications/Visual Studio Code.app" ]; then
+    export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
+fi
+
 # Java/Android
 if [ -f "/usr/libexec/java_home" ]; then
     export JAVA_HOME=$(/usr/libexec/java_home)
