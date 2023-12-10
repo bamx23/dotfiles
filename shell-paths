@@ -70,3 +70,6 @@ export NVM_DIR="$HOME/.nvm"
 export PATH="$PATH:$HOME/.rvm/bin"
 # export PATH="$HOME/.rvm/bin:$PATH"
 [ -s "$HOME/.rvm/scripts/rvm" ] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+
+# Rust
+[ -s "$HOME/.cargo/env" ] && source "$HOME/.cargo/env"
