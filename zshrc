@@ -10,6 +10,10 @@ functions[prompt_hg]=""
 
 # Own
 
+if [ -f ~/.shell-local ]; then
+    source ~/.shell-local
+fi
+
 source ~/.shell-paths
 source ~/.shell-aliases
 source ~/.shell-functions
