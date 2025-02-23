@@ -77,6 +77,11 @@ if [ "$ANACONDA_ENABLED" = true ]; then
     fi
 fi
 
+# Pyenv (if pyenv is installed)
+if [ -d "$HOME/.pyenv" ]; then
+    eval "$(pyenv init --path)"
+fi
+
 # RVM
 export PATH="$PATH:$HOME/.rvm/bin"
 # export PATH="$HOME/.rvm/bin:$PATH"
