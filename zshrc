@@ -23,3 +23,10 @@ export EDITOR='nano'
 # Other
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
+# Docker Desktop
+if [ -d "${HOME}/.docker/completions" ]; then
+    fpath=($HOME/.docker/completions $fpath)
+    autoload -Uz compinit
+    compinit
+fi
